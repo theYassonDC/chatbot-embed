@@ -9,7 +9,7 @@ interface Ichat {
 function App() {
   const [promp, setPromp] = useState('')
   const [history, setHistory] = useState<Ichat[]>([])
-  async function getPresentation(params:type) {
+  async function getPresentation() {
     const resIa = await getIA('Haz una presentación como si fueras un chatbot de una empresa de mantenimiento de redes y hardware llamado tecnova')
     if (resIa) {
       setHistory(prevList => [...prevList, { client: false, content: resIa }])

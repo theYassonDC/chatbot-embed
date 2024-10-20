@@ -1,12 +1,10 @@
-import { useEffect, useState } from "react"
 import BourbleClient from "./BorbleClient"
-import { getLocalStorage } from "../utils/localStorage"
 import BourbleComponent from "./Bourble"
 interface Storage {
   client: boolean,
   content: string
 }
-function ChatBot({ history }: Storage) {
+function ChatBot({ history }: { history: Storage[] }) {
 
   return (
     <>
